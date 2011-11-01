@@ -13,6 +13,8 @@ class Campground(models.Model):
     amenities = models.TextField()
     point = models.PointField(srid=4326)
 
+    objects = models.GeoManager()
+
     def locator_point(self):
         return self.point
 
