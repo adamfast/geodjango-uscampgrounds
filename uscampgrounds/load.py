@@ -3,7 +3,6 @@ import os
 from decimal import Decimal
 from django.contrib.gis.geos import Point
 from uscampgrounds.models import Campground
-from locator.objects.models import *
 
 LON = 0
 LAT = 1
