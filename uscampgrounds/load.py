@@ -19,6 +19,7 @@ AMENITIES = 11
 def scrub_chars(input):
     input = input.replace('\x96', '')
     input = input.replace('\xa0', '')
+    input = input.replace('\xd0', '')
     return input
 
 def import_info(import_file):
