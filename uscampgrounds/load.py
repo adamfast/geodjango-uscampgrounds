@@ -43,31 +43,41 @@ def import_info(import_file):
 if __name__ == '__main__':
     base_path = '/Users/adam/Downloads/'
     try:
-        import_file = open(os.path.join(base_path, 'NORTHCENTRAL.csv'), 'rU')
+        import_file = open(os.path.join(base_path, 'NORTHCENTRAL_CAMP.csv'), 'rU')
         import_info(import_file)
     except IOError:
         pass
 
     try:
-        import_file = open(os.path.join(base_path, 'NORTHWEST.csv'), 'rU')
+        import_file = open(os.path.join(base_path, 'NORTHWEST_CAMP.csv'), 'rU')
         import_info(import_file)
     except IOError:
         pass
 
     try:
-        import_file = open(os.path.join(base_path, 'SOUTHWEST.csv'), 'rU')
+        import_file = open(os.path.join(base_path, 'SOUTHWEST_CAMP.csv'), 'rU')
         import_info(import_file)
     except IOError:
         pass
 
     try:
-        import_file = open(os.path.join(base_path, 'NORTHEAST.csv'), 'rU')
+        import_file = open(os.path.join(base_path, 'NORTHEAST_CAMP.csv'), 'rU')
         import_info(import_file)
     except IOError:
         pass
 
     try:
-        import_file = open(os.path.join(base_path, 'SOUTH.csv'), 'rU')
+        import_file = open(os.path.join(base_path, 'SOUTH_CAMP.csv'), 'rU')
         import_info(import_file)
+    except IOError:
+        pass
+
+    try:
+        import_file = open(os.path.join(base_path, 'CALIFORNIA_CAMP.csv'), 'rU')
+    except IOError:
+        pass
+
+    try:
+        import_file = open(os.path.join(base_path, 'CANADA_CAMP.csv'), 'rU')
     except IOError:
         pass
