@@ -18,6 +18,7 @@ AMENITIES = 11
 
 def scrub_chars(input):
     input = input.replace('\x96', '')
+    input = input.replace('\x98', '')
     input = input.replace('\xa0', '')
     input = input.replace('\xd0', '')
     return input
@@ -39,46 +40,3 @@ def import_info(import_file):
         camp.hookups = row[HOOKUPS]
         camp.point = Point((Decimal(row[LON]), Decimal(row[LAT])))
         camp.save()
-
-
-if __name__ == '__main__':
-    base_path = '/Users/adam/Downloads/'
-    try:
-        import_file = open(os.path.join(base_path, 'NORTHCENTRAL_CAMP.csv'), 'rU')
-        import_info(import_file)
-    except IOError:
-        pass
-
-    try:
-        import_file = open(os.path.join(base_path, 'NORTHWEST_CAMP.csv'), 'rU')
-        import_info(import_file)
-    except IOError:
-        pass
-
-    try:
-        import_file = open(os.path.join(base_path, 'SOUTHWEST_CAMP.csv'), 'rU')
-        import_info(import_file)
-    except IOError:
-        pass
-
-    try:
-        import_file = open(os.path.join(base_path, 'NORTHEAST_CAMP.csv'), 'rU')
-        import_info(import_file)
-    except IOError:
-        pass
-
-    try:
-        import_file = open(os.path.join(base_path, 'SOUTH_CAMP.csv'), 'rU')
-        import_info(import_file)
-    except IOError:
-        pass
-
-    try:
-        import_file = open(os.path.join(base_path, 'CALIFORNIA_CAMP.csv'), 'rU')
-    except IOError:
-        pass
-
-    try:
-        import_file = open(os.path.join(base_path, 'CANADA_CAMP.csv'), 'rU')
-    except IOError:
-        pass

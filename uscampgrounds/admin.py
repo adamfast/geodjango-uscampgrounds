@@ -26,4 +26,4 @@ class CampgroundOSMAdmin(admin.OSMGeoAdmin):
 
 
 admin.site.register(Campground, CampgroundAdmin)
-admin.site.register(Campground, CampgroundOSMAdmin)
+#admin.site.register(Campground, CampgroundOSMAdmin)
