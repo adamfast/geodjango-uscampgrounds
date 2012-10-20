@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for object in object_list %}
+{{ object }} {% if object.distance %}- {{ object.distance.mi }} mi. {% endif %}({{ object.point.y }}, {{ object.point.x }})<br>
+{% endfor %}
+
+{% endblock content %}

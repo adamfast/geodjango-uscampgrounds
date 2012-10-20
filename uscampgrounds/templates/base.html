@@ -1,0 +1,50 @@
+<html>
+<head>
+  <script src='http://media.adamfast.com/QueryData.compressed.js'></script>
+  <script language='JavaScript'>
+
+    function checkLocation() {
+      var getData = new QueryData();
+      if ('lat' in getData) { }
+      else {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            function (ppos) {
+              window.location.href = window.location.href + '?lat=' + ppos.coords.latitude + '&lon=' + ppos.coords.longitude;
+            },
+            function (err) {
+              switch(err.code) {
+
+                case err.TIMEOUT:
+                  alert('Attempts to retrieve location timed out.')
+                  break;
+
+                case err.POSITION_UNAVAILABLE:
+                  alert("Your browser doesn't know where you are.")
+                  break;
+
+                case err.PERMISSION_DENIED:
+                  alert('You have to give us permission!')
+                  break;
+
+                case err.UNKNOWN_ERROR:
+                  alert('Unknown error returned.')
+                  break;
+
+                default:
+                  alert(err + ' ' + err.code)
+
+              }
+            }
+          );
+        }
+      }
+    }
+  </script>
+</head>
+<body{% block body_override %} onLoad="javascript:checkLocation();"{% endblock body_override %}>
+{% block content %}
+
+{% endblock content %}
+</body>
+</html>
