@@ -18,7 +18,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
-    long_description=read('README'),
+    long_description=read('README.txt'),
     license = "BSD",
     keywords = "django geodjango",
     classifiers = [
