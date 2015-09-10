@@ -39,4 +39,7 @@ def import_info(import_file):
         camp.elevation = row[ELEVATION]
         camp.hookups = row[HOOKUPS]
         camp.point = Point((Decimal(row[LON]), Decimal(row[LAT])))
-        camp.save()
+        try:
+            camp.save()
+        except:
+            print('%s failed ' % row)

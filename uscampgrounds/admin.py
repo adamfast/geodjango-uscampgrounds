@@ -8,7 +8,7 @@ class CampgroundAdmin(admin.GeoModelAdmin):
     default_zoom = 6
     max_zoom = 18
     min_zoom = 6
-    map_template = 'gis/admin/openlayers_extralayers.html'
+#    map_template = 'gis/admin/openlayers_extralayers.html'
 
     list_display = ('name', 'campground_code', 'campground_type', 'phone', 'sites', 'elevation', 'hookups', 'amenities')
     list_filter = ('campground_type',)
