@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
     name='geodjango-uscampgrounds',
-    version='1.0',
+    version='2.0',
     description='A set of Django models to store the data files from uscampgrounds.info',
     author='Adam Fast',
     author_email='adamfast@gmail.com',
@@ -29,7 +29,7 @@ setup(
         "License :: OSI Approved :: BSD License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2",
+        "Programming Language :: Python :: 3",
         "Topic :: Internet :: WWW/HTTP",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
